@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gu36an5mw-python-gitops
+  description: This is GitOps manifest for gu36an5mw-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: gu36an5mw-python
+    backstage.io/kubernetes-id: gu36an5mw-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: gu36an5mw-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gu36an5mw-python
